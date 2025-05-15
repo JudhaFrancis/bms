@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PatientCase extends Model
+class WhatsappLog extends Model
 {
     use HasFactory;
+    protected $table = 'whatsapp_log';
 }

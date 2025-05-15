@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('patient_cases', function (Blueprint $table) {
+        Schema::create('whatsapp_log', function (Blueprint $table) {
             $table->id();
-            $table->string("description");
-            $table->string("remarks");
-            $table->string("ref_doctor_fk_id");
+            $table->string('from');
+            $table->string('to');
+            $table->string('message_type')->default('Plain Text');
+            $table->string('message');
+            $table->enum('status', ['Sent', 'Failed']);
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('patient_cases');
+        Schema::dropIfExists('whatsapp_log');
     }
 };
