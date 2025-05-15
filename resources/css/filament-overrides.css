@@ -1,0 +1,14 @@
+/* Custom sidebar width */
+.fi-sidebar {
+    width: 220px !important; /* default is ~250px, adjust as needed */
+}
+
+/* Reduce icon + label size */
+.fi-sidebar-item {
+    font-size: 14px;
+}
+
+.fi-sidebar-item .fi-icon {
+    width: 18px;
+    height: 18px;
+}

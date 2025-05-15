@@ -70,7 +70,10 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 // Widgets\AccountWidget::class,
                 \App\Filament\Widgets\StatsOverview::class,
-                // \App\Filament\Resources\Resource\Widgets\StatsOverviewDoctor::class,
+                \App\Filament\Widgets\MonthlyPatientsChart::class,
+                \App\Filament\Widgets\MonthlyDoctorsChart::class,
+                \App\Filament\Widgets\MonthlyCaseReportsChart::class,
+                \App\Filament\Widgets\MonthlyWhatsapplogChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,
